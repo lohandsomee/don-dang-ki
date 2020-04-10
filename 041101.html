@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Đơn đăng kí</title>
+	<style type="text/css">@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Slab&display=swap');
+
+:root {
+  --color-warmblack: #0B3C49;
+	--color-white: #FFFFFF;
+	--color-flame: #E4572E;
+	--color-mandarin: #F0803C;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  line-height: 1.4;
+  color: var(--color-white);
+  margin: 0;
+	max-width: 850px;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background-image: linear-gradient(115deg, rgba(228, 87, 46, 0.8), rgba(240, 128, 60, 0.7)), url(https://images.unsplash.com/photo-1475483768296-6163e08872a1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+h1 {
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+p {
+  font-size: 1.125rem;
+}
+
+h1,
+p {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+}
+
+input,
+button,
+select,
+textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+button {
+  border: none;
+  color: var(--color-white);
+}
+
+form {
+  background: var(--color-white);
+  border-radius: 0.25rem;
+	margin: -5rem auto 3rem auto;
+	color: var(--color-warmblack);
+	padding: 3rem;
+}
+
+header {
+	text-align: center;
+	margin: 12rem auto; 
+}
+
+#title {
+	margin-bottom: 2rem;
+	font-family: 'Roboto Slab', serif;
+	font-size: 3rem;
+}
+
+span {
+	color: var(--color-flame);
+}
+
+.form-group {
+  margin: 0 auto 1.25rem auto;
+  padding: 0.25rem;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  height: 2.375rem;
+  padding: 0.375rem 0.75rem;
+  color: #3F3F37;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control:focus {
+  border-color: var(--color-mandarin);
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(240, 128, 60, 0.25);
+}
+
+.input-radio,
+.input-checkbox {
+  display: inline-block;
+  margin-right: 0.625rem;
+  min-height: 1.25rem;
+  min-width: 1.25rem;
+}
+
+.input-textarea {
+  min-height: 120px;
+  width: 100%;
+  padding: 0.625rem;
+  resize: vertical;
+}
+
+#submit {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  background: var(--color-warmblack);
+  color: var(--color-white);
+  border-radius: 2px;
+  cursor: pointer;
+	text-align: center;
+}
+
+footer {
+	text-align: center;
+	margin-bottom: 1.5rem;
+	font-size: 0.85rem;
+}
+
+body {
+  width: 100%;
+  margin: 12rem auto 0 auto;
+}
+
+@media (max-width: 870px) {
+  body {
+    max-width: 540px;
+  }
+	#title {
+		font-size: 1.9rem;
+	}
+	#description {
+		font-size: 0.9rem;
+	}
+}
+
+
+</style>
+</head>
+<body>
+<header>
+	<h1 id="title">Đơn đăng kí tham gia text game<br>"Trại hè ma sói S1 - Mùa hè đầu tiên"</h1>
+	<p id="description">Lo cảm ơn bạn đã ủng hộ sản phẩm, mong bạn vui lòng trả lời thật thà và đầy đủ nhất những câu hỏi bên dưới, đây là những thông tin sẽ được sử dụng trong 3 tháng tham gia text game. Sau khi hoàn thành bạn hãy ấn "Gửi đơn", chúng tôi sẽ liên hệ sớm để phỏng vấn casting.<br>Chúc bạn một ngày vui vẻ!</p>
+</header>
+<form id="survey-form">
+	<div class="form-group">
+		<label id="name-label" for="name"><span>Tên</span></label>
+		<input
+					 type="text"
+					 id="name"
+					 class="form-control"
+					 name="name"
+					 placeholder="Nhập họ và tên của bạn"
+					 required/>
+	</div>
+	<div class="form-group">
+		<label id="email-label" for="email"><span>Email</span></label>
+		<input
+					 type="email"
+					 id="email"
+					 class="form-control"
+					 name="email"
+					 placeholder="Nhập email của bạn"
+					 required/>
+	</div>
+	<div class="form-group">
+		<label for="number" id="number-label"><span>Tuổi</span></label>
+		<input
+					 id="number"
+					 class="form-control"
+					 type="number"
+					 name="age"
+					 min="12"
+					 max="100"
+					 placeholder="Nhập tuổi của bạn"/>
+	</div>
+	<div class="form-group">
+		<label id="date-label" for="birthday"><span>Ngày sinh</span></label>
+		<input
+						 id="birthday"
+						 class="form-control"
+						 type="date"
+						 name="birthday"/>
+	</div>
+	<div class="form-group">
+		<p>Bạn đến từ <span>group</span> nào?</p>
+		<select id="dropdown" name="group" class="form-control" required>
+			<option disabled selected value>Chọn 1 group đã dẫn bạn đến đơn này</option>
+			<option value="textgame">TEXT GAME - Be the game changer</option>
+			<option value="wolfwar">Ma Sói Group - Wolf War</option>
+			<option value="2020">Ma sói online chống dịch 2020</option>
+		</select>
+	</div>
+	<div class="form-group">
+		<p>Bạn tự nhận mình là người chơi <span>mạnh về</span> mặt nào hơn?</p>
+		<label>
+			<input
+						 type="radio"
+						 class="input-radio"
+						 name="thế mạnh"
+						 value="suy luận"
+						 checked/>
+			Suy luận</label>
+		<label>
+			<input
+						 type="radio"
+						 class="input-radio"
+						 name="thế mạnh"
+						 value="giao tiếp"/>
+			Giao tiếp</label>
+	</div>
+	<div class="form-group">
+		<p>Những <span>tính cách</span>, <span>kĩ năng</span> mà bạn có</p>
+		<label>
+			<input
+						 type="checkbox"
+						 class="input-checkbox"
+						 name="tính cách"
+						 value="Nói chuyện tự nhiên với người không quen"/>
+			Nói chuyện tự nhiên với người không quen</label>
+		<label>
+			<input
+						 type="checkbox"
+						 class="input-checkbox"
+						 name="tính cách"
+						 value="Tự hòa giải mâu thuẫn với người chơi"/>
+			Tự hòa giải mâu thuẫn với người chơi</label>
+		<label>
+			<input
+						 type="checkbox"
+						 class="input-checkbox"
+						 name="tính cách"
+						 value="Hiếu thắng"/>
+			Hiếu thắng</label>
+		<label>
+			<input
+						 type="checkbox"
+						 class="input-checkbox"
+						 name="tính cách"
+						 value="Hiếu khách"/>
+			Hiếu khách</label>
+		<label>
+			<input
+						 type="checkbox"
+						 class="input-checkbox"
+						 name="tính cách"
+						 value="Dẫn chương trình"/>
+			Dẫn chương trình</label>
+		<label>
+			<input
+						 type="checkbox"
+						 class="input-checkbox"
+						 name="tính cách"
+						 value="Diễn nhập vai"/>
+			Diễn nhập vai</label>
+		<label>
+			<input
+						 type="checkbox"
+						 class="input-checkbox"
+						 name="tính cách"
+						 value="Nói nhiều"/>
+			Nói nhiều</label>
+		<label>
+			<input
+						 type="checkbox"
+						 class="input-checkbox"
+						 name="tính cách"
+						 value="Hài hước"/>
+			Hài hước</label>
+		<label>
+			<input
+						 type="checkbox"
+						 class="input-checkbox"
+						 name="tính cách"
+						 value="Lật mặt"/>
+			Lật mặt</label>
+		<label>
+			<input
+						 type="checkbox"
+						 class="input-checkbox"
+						 name="tính cách"
+						 value="Không để bụng"/>
+			Không để bụng</label>
+		<label>
+			<input
+						 type="checkbox"
+						 class="input-checkbox"
+						 name="tính cách"
+						 value="Gáy"/>
+			Gáy</label>
+		<label>
+			<input
+						 type="checkbox"
+						 class="input-checkbox"
+						 name="tính cách"
+						 value="Tâm phục khẩu phục khi thua"/>
+			Tâm phục khẩu phục khi thua</label>
+	</div>
+	<div class="form-group">
+		<p>Những <span>kết quả</span>, <span>giải</span> cao nhất bạn đã đạt được khi chơi game (đồng đội hoặc cá nhân) trong group của mình</p>
+		<textarea
+							class="input-textarea"
+							name="giải"
+							placeholder="Khoe ở đây"></textarea>
+	</div>
+	<div class="form-group">
+		<p>Những chú thích thêm về các câu trả lời của bạn ở phía trên, những điều bạn muốn khoe thêm trong đơn đăng kí của mình</p>
+		<textarea
+							class="input-textarea"
+							name="chú thích"
+							placeholder="Chú thích ở đây"></textarea>
+	</div>
+	<div class="form-group">
+		<p>Những lưu ý của bạn để chúng ta sẽ có một buổi phỏng vấn casting hoàn hảo</p>
+		<textarea
+							class="input-textarea"
+							name="lưu ý"
+							placeholder="Lưu ý ở đây"></textarea>
+	</div>
+	<div class="form-group">
+		<button type="submit" id="submit">Gửi đơn</button>
+	</div>
+</form>
+<footer>Text game và form đăng kí đều thuộc sáng tạo và quyền sở hữu của Lo, vui lòng liên hệ trước khi sao chép, xin cảm ơn.</footer>
+</body>
+</html>
